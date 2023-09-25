@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+:root{
+    --animate-duration: 2s;
+    --animate-delay: 1s;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.heading2__dark 
+{
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #1a1d2d;
+    line-height: 42px;
+    font-style: normal;
+}
+.text__body
+{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #585858;
+    line-height: 24px;
+    font-style: normal;
+    padding-right: 15rem;
+    padding-left: 15rem;
+    display: inline-block;
+}
+/* Header start */
+header .navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+header .navbar a {
+    color: #ffffff;
+}
+header .navbar a i {
+    color: #35A22C;
+    margin-right: 0.5rem;
+    font-size: 2.7rem;
+}
+header .collapse .nav-link span {
+    color: #ffffff;
+    display: inline-block;
+}
+/* nav logo flex */
+.navbar .container .navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-basis: 65%;
+}
+.navbar .container .navbar-brand span {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.navbar-brand:focus, .navbar-brand:hover {
+    color: #ffffff;
+}
+
+
+/* nav link */
+.collapse.navbar-collapse .navbar-nav .nav-item{
+    margin: auto 0.75rem;
+    transition: all 0.7s;
+
+}
+.navbar-nav .nav-link.active
+{
+    color: #35A22C;
+}
+.collapse.navbar-collapse .navbar-nav .nav-item::after
+{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #35A22C;
+    display: block;
+    transition: all 0.7s;
+}
+.collapse.navbar-collapse .navbar-nav .nav-item:hover:after {
+    width: 100%;
+}
+.collapse.navbar-collapse#collapsibleNavId .navbar-nav .nav-item:hover .nav-link
+{
+    color: #35A22C;
+}
+/* Header end */
+
+/* Carousel start */
+.carousel-inner {
+    height: 100vh;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-inner .carousel-item{
+    height: 100%;
+}
+/* Chỉnh nội dung hình và chữ cho các carousel */
+.carousel-caption img {
+    border-radius: 50%;
+    width: 7%;
+}
+.carousel-caption {
+    background: rgba(37, 37, 37, 0.562);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* dùng height,width 100% và top,left:0 để bắt đầu điểm đầu tiên bên trái và ở trên của phần tử cha phủ hết lớp màn giống overlay */
+.carousel-caption h5 {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.carousel-caption {
+    font-size: 1.5rem;
+}
+
+/* Chỉnh button gạch ngang thành nút tròn */
+/* gắn thêm class btn__carousel để đẩy điểm ưu tiên */
+.carousel-indicators button.btn__carousel {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.carousel-indicators button.btn__carousel.active {
+    background-color: #35A22C;
+}
+.carousel-indicators {
+    transform: translateY(-100px);
+}
+/* carousel end */
+
+/* PROJECT start */
+.project__section {
+    margin: 5rem 0;
+}
+.project__intro {
+    text-align: center;
+}
+/* Project>nút bấm button */
+/* .project__content .nav.nav-pills {
+    width: 50%;
+    margin: auto;
+} */
+.project__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.project__content .nav {
+    margin: 2rem auto;
+}
+.project__content .nav button.active {
+    background: #35A22C;
+    color: #ffffff;
+    border: 1px solid #35A22C;
+}
+.project__content .nav button:hover.active {
+    background: #35A22C;
+    color: #ffffff;
+    border: 1px solid #35A22C;s
+}
+.project__content .nav button {
+    color: #000;
+    border: 1px solid #000;
+    margin: auto 0.3rem;
+    transition: all 0.5s;
+}
+.project__content .nav button:hover {
+    color: #35A22C;
+    box-shadow: 0 0 14px 0 rgb(0, 0, 0, 0.3);
+    border: 1px solid #35A22C;
+}
+.tab-pane .row {
+    /* gap: 20px; */
+}
+.tab-pane .row .col-4 {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.tab-pane .row .col-4 .card {
+    box-shadow: 0 0 0.4rem rgba(0,0,0,.13);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.tab-pane .row .col-4:hover .card {
+    box-shadow: 0 0 10px 0 rgba(0, 0 ,0 , 0.3);
+    transform: translateY(-10px);
+}
+.tab-pane .row .col-4 .card .card-img-top
+{
+    border-radius: 20px 20px 0 0;
+}
+.tab-pane .row .col-4 .card .card-body .card-text
+{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #585858;
+    margin-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+.tab-pane .row .col-4 .card .card-body .card-text span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.tab-pane .row .col-4:hover .card-body {
+    border: 1px solid #36a22c9f ;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+}
+.tab-pane .row .col-4:hover .card-body p span {
+    color: #35A22C;
+}
+
+/* Project end */
+/* Skills start */
+.skills__section {
+    background-image: url(../image/3.jpg);
+    background-attachment: fixed;
+    background-size: 130%;
+    background-position: center;
+    height: 750px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.skills__section::before {
+content: "";
+width: 100%;
+height: 100%;
+background: rgb(0, 0, 0, 0.6);
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+}
+.skills__section .container {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.skills__content .skills__top{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills__content .skills__bottom .skills__bottom__item {
+    color: #ffffff;
+    text-align: center;
+    background: rgb(0, 0, 0, 0.4);
+    padding: 5rem 3rem;
+    margin: auto 1rem;
+    width: calc(33.33% - 2rem);
+/* hàm width: calc(33.3333% - 2rem) để giảm chiều rộng của mỗi col đi 2rem bù lại margin đã được cộng thêm 1rem*6 >>giúp không vỡ layout của gridbox */
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgb(253, 253, 253, 0.1);
+    background: rgba(100, 99, 99, 0.2);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.178);
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+.skills__content .skills__bottom .skills__bottom__item:hover {
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 1);
+    transform: translateY(-20px);
+}
+
+
+.skills__content .skills__bottom .skills__bottom__item .fa {
+    font-size: 3rem;
+    color: #35A22C;
+}
+.skills__content .skills__bottom .skills__bottom__item h3 {
+    margin: 1.5rem auto;
+}
+/* Skill end */
+/* Award start */
+.award__section {
+    padding: 3rem;
+    
+    height: 400px;
+    background-image: url(../image/memphis_3.png);
+    background-position: left bottom;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.award__content .col-5 .award__left {
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 10px;
+}
+/* Award end */
+
+
+/* Footer start */
+footer {
+    background: #000;
+    height: 200px;
+    color: #AAAAAA;
+}
+.container p {
+    text-align: center;
+    padding: 2rem;
+}
+.container .social {
+    justify-content: center;
+    padding: 3rem;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.473);
+}
+.container .social a {
+    color: #AAAAAA;
+    text-decoration: none;
+    margin: auto 1rem;
+    border: 1px solid #aaaaaa5e;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.container .social a:hover {
+    color: #35A22C;
+    border: 1px solid #35A22C;
+}
+/* Footer end */
+
+/* Responsive */
+/* Kich thuoc man hanh thiet bi nho va dien thoai */
+/* khi sử dụng max-width, các vùng thiết bị nhỏ hơn sẽ được viết nằm ở bên dưới để khi có cùng độ ưu tiên các selector của breakpoint nhỏ sẽ được ưu tiên */
+@media screen and (max-width: 576px) {
+    .navbar-brand span {
+        /* color: red; */
+    }
+}
+
+
+/* Kich thuoc man hinh tablet, laptop nho */
+@media screen and (max-width: 99xpx) {
+
+
+}
+
+
+/* Kich thuoc man hinh laptop lon hoac desktop */
+@media screen and (max-width: 1440px) {
+
+
+}
+
